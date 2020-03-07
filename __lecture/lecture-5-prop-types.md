@@ -145,7 +145,7 @@ const UserProfile = ({ username, age, address }) => {
 UserProfile.propTypes = {
   username: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
-  address: PropTypes.shape({
+  address: PropTypes.shape({ //shape = object
     line1: PropTypes.string.isRequired,
     line2: PropTypes.string,
     city: PropTypes.string.isRequired,

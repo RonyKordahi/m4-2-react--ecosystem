@@ -20,7 +20,7 @@ function About(props) {
 }
 
 const Intro = styled.div`
-  padding-bottom: 24px;
+    padding-bottom: 24px;
 `;
 
 export default About;
