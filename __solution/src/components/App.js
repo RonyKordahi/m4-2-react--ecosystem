@@ -34,13 +34,13 @@ function App() {
 }
 
 const Wrapper = styled.div`
-  max-width: 800px;
-  margin: auto;
+    max-width: 800px;
+    margin: auto;
 `;
 
 const Main = styled.main`
-  padding-top: 32px;
-  padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 `;
 
 export default App;

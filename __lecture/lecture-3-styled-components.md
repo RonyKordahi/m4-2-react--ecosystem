@@ -10,7 +10,7 @@
 ```jsx
 import styled from 'styled-components';
 
-const Button = styled.button`
+const StyledButton = styled.button`
   background: blueviolet;
   border: none;
   padding: 16px 32px;
@@ -20,7 +20,7 @@ const Button = styled.button`
 `;
 
 ReactDOM.render(
-  <Button>Hello World</Button>,
+  <StyledButton>Hello World</StyledButton>,
   document.querySelector('#root')
 );
 ```
@@ -46,7 +46,7 @@ const Button = styled.button(`
 
 # Browser support
 
-<img src='./assets/caniuse-template-literals.png' style=max-width:60vw' />
+<img src='./assets/caniuse-template-literals.png' style=max-width:60vw />
 
 ---
 
@@ -96,9 +96,7 @@ Convert the following inline styles to styled-components
   margin: 0 auto;
   height: 300px;
 }
-
 ```
-
 
 ```jsx
 function App(props) {
@@ -106,6 +104,23 @@ function App(props) {
     <div className="wrapper">
       Hello World
     </div>
+  )
+}
+```
+
+```jsx
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+    margin: 0 auto;
+    height: 300px;
+    `;
+
+function App(props) {
+  return (
+    <StyledDiv>
+      Hello World
+    </StyledDiv>
   )
 }
 ```
@@ -141,6 +156,36 @@ function IconButton(props) {
       </i>
       {props.children}
     </button>
+  )
+}
+```
+
+```jsx
+import styled from "styled-components";
+
+const StyledButton = styled.button `
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover, &:focus {
+    transform: translateY(-3px);
+  }
+`;//could have also put the .icon class and it's styles inside the button since the <i> is a child of <button>
+
+const StyledIcon = styled.img `
+  width: 32px;
+  height: 32px;
+`;
+
+function IconButton(props) {
+  return (
+    <StyledButton className="btn">
+      <StyledIcon>
+        {props.icon}
+      </StyledIcon>
+      {props.children}
+    </StyledButton>
   )
 }
 ```
